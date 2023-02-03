@@ -1,0 +1,29 @@
+{
+  "name": "my-node-site",
+  "version": "1.0.1",
+  "description": "my site with nodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo test finished",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github.com/artemidagre.git"
+  },
+  "keywords": [
+    "site"
+  ],
+  "author": "ArtemidaGre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/github.com/artemidagre/issues"
+  },
+  "homepage": "https://github.com/github.com/artemidagre#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "pg": "^8.9.0"
+  }
+}

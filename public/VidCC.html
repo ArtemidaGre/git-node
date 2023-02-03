@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-16">
+        <title>СКК ч1</title>
+        <link rel="stylesheet" type="text\css" href="../main.css">
+        <style>@import url(../main.css);</style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Maze&display=swap" rel="stylesheet">
+        <style>
+            h2{
+                font-family: 'Rubik Maze';
+                font-size: xx-large;
+            }
+            .download_button{
+                text-align: center;
+                align-self: center;
+                background-color: red;
+                color: rgb(7, 5, 98);
+                min-width: 40%;
+                font-size: 600%;
+            }
+            button:focus{
+                box-shadow: 0 0 0 4px #710000;
+            }
+            
+        </style>
+        <script>
+            const back = () =>{
+                window.open('../proj.html', '_self')
+            }
+            const down = () =>{
+                window.open('https://github.com/ArtemidaGre/My-first-py-game-')
+                document.getElementById('button_dow_game').innerHTML='Загрузка начата!'
+            }
+        </script>
+    </head>
+    <body>
+        <h1>
+            <button name="box_b" onclick="back()" class="back_button">Назад</button>
+        </h1>
+        <div>
+            <video src="vid1.mp4" autoplay id="video"></video>
+            <button onclick="VideoControls.start('video1')">►</button>
+            <button onclick="VideoControls.pause('video1')">||</button>
+            <button onclick="VideoControls.volP('video1')">+</button>
+            <button onclick="VideoControls.volM('video1')">-</button>
+        </div>
+        
+        
+        <script>
+            const VideoControls = {
+                start: (id) =>{document.getElementById('video').play()},
+                pause: (id) =>{document.getElementById('video').pause()},
+                volP: (id) =>{document.getElementById('video').volume += 0.1},
+                volM: (id) =>{document.getElementById('video').volume -= 0.1}
+            }
+        </script>
+        <p class="copyright">Copyright © 2022. All rights reserved</p>
+    </body>
+</html>
