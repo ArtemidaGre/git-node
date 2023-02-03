@@ -1,8 +1,18 @@
-const res = require("express")
+import express from 'express';
 const path = require("path")
 const http = require("http")
 const fs = require("fs")
+const pg = require("pg")
 
+app = express()
+
+const config = {
+  host: 'localhost',
+  user: 'admin',     
+  password: 'admin',
+  database: 'nodejs',
+  port: 5432,
+};
 
 console.log("Ready to work")
 
@@ -47,6 +57,7 @@ var server = http.createServer((req, res) => {
     }
   })
 })
+
 
 server.listen(1945, (err, res) => {
     console.log("Server listening on port 1945")

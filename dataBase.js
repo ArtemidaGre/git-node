@@ -17,7 +17,7 @@ client.connect(err => {
     }
 });
 
-function queryDatabase() {
+function queryDatabaseWrite() {
     const query = `
         DROP TABLE IF EXISTS inventory;
         CREATE TABLE inventory (id serial PRIMARY KEY, name VARCHAR(50), quantity INTEGER);
@@ -36,5 +36,26 @@ function queryDatabase() {
         .then(() => {
             console.log('Finished execution, exiting now');
             process.exit();
+        });
+}
+
+function queryDatabase() {
+
+    console.log(`Running query to PostgreSQL server: ${config.host}`);
+
+    const query = 'SELECT * FROM inventory;';
+
+    client.query(query)
+        .then(res => {
+            const rows = res.rows;
+
+            rows.map(row => {
+                console.log(`Read: ${JSON.stringify(row)}`);
+            });
+
+            process.exit();
+        })
+        .catch(err => {
+            console.log(err);
         });
 }
