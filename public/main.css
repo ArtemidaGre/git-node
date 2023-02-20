@@ -105,8 +105,11 @@ a{
     font-size: x-large;
     padding: 5px 10px;
     cursor:crosshair;
-    border-radius: 15%;
-    max-width: 100%;
+    border-radius: 15px;
+    text-align: center;
+    width: auto;
+    min-width: 90%;
+    margin-top: 15px;
 }
 
 .main_button:hover{
@@ -150,8 +153,14 @@ a{
     margin: 0%;
     z-index: 1;
     top: 0;
-    border-top-right-radius: 5%;
     z-index: 2;
+    padding-top: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+.side_menu li{
+    list-style: none;
 }
 
 .side_menu_a{
@@ -179,7 +188,7 @@ ol{
     font-style: italic;
     color:antiquewhite;
     margin: 3% 3% 3% 3%;
-    border-radius: 3%;
+    border-radius: 10px;
     border-color: aqua;
     background-color: darkgray;
 }
@@ -192,8 +201,8 @@ ol{
 }
 
 .copyright{
-    position: absolute;
-    bottom: 3%;
+    position: fixed;
+    bottom: 5px;
     right: 1em;
     text-align: right;
 }
@@ -211,7 +220,7 @@ ol{
     -khtml-user-select: none;
     -webkit-user-select: none;
     user-select: none;
-    opacity: 0.7;
+    opacity: 0.0;
     position:absolute;
     font-size: larger;
     font-family: Arial, Helvetica, sans-serif;
@@ -257,3 +266,31 @@ ol{
     z-index: 25;
 }
 .ad a{color: darkblue; text-decoration: none; text-align: center; margin-left: 5%; font-size: larger}
+
+.vk{
+    background-color: black;
+    color: green;
+    font-family: 'Lobster';
+    font-size: x-large;
+    padding: 5px 10px;
+    cursor:crosshair;
+    border-radius: 15px;
+    text-align: center;
+    width: auto;
+    position: absolute;
+    min-width: 40%;
+    margin-top: 15px;
+    bottom: 5%;
+    left: 2%;
+}
+
+.vk:hover{
+    background-color: rgb(85, 85, 85);
+    box-shadow: 3mm rgb(55, 55, 55);
+    cursor: crosshair;
+    transition: 500ms;
+}
+
+.vk:focus{
+    box-shadow: 0 0 0 4px #cbd6ee;
+}

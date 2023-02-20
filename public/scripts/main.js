@@ -66,3 +66,5 @@ const VideoControls = {
     volP: (id) =>{document.getElementById(id).volume += 0.1},
     volM: (id) =>{document.getElementById(id).volume -= 0.1}
 }
+
+const OpenVk = () =>{window.open('https://vk.com/whcoder', "_blanc")}
